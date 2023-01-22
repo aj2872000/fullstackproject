@@ -86,4 +86,7 @@ after that install:npm i express-async-handler
     express-async-handler is a middleware package for Express.js that allows you to handle asynchronous routes and middleware using the async/await syntax, automatically catching any errors that are thrown by the asynchronous code and passing them to the next error-handling middleware in your application. This package is useful to handle the errors that might occur when using async/await in express routes and make the code more readable and maintainable.  
 
 
+after that install:npm i bcryptjs
+    In summary, bcrypt.js is used because it provides a secure way to store passwords in a MongoDB database or other types of databases by using a computationally expensive algorithm that slows down brute force attacks on hashed passwords.
+
   

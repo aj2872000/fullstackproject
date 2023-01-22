@@ -1,5 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const User = require("../models/userModel");
+
+
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -19,6 +21,10 @@ const registerUser = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("Email has alreaddy been registered");
   }
+
+  //encrypt password before saving to DB
+//   const salt = await bcrypt.genSalt(10);
+//   const hashedPassword = await bcrypt.hash(password, salt);
 
   //create new user if not present
   const user = await User.create({
