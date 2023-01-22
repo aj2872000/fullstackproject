@@ -1,0 +1,51 @@
+1.create backend folder
+  create server.js file inside it
+  then run npm init -y :this will create package.json file for your backend part
+  install: npm i nodemon -g :this will keep track of backend server on any change we made in backed file 
+           because of this we not have to start our server again and again
+
+  after that install dependencies:
+     npm i express mongoose cors dotenv body-parser
+
+2.after that start making backend server: in server.js
+  import all the dependencies which we have intalled:
+     const dotenv = require("dotenv").config();
+         create .env file in backend folder:this will keep track of all the variables which are very important
+
+     const express = require("express");
+     const mongoose = require("mongoose");
+     const bodyParser = require("body-parser");//bodyParser bascially converts data into objects so that it is easy to interact for frontend when data is coming from server
+     const cors = require("cors");
+
+after importing all the dependencies:
+   create instance of express like: const app= express()     
+    
+   after that create PORT variable: const PORT = process.env.PORT || 5000
+
+   after that connect mongodb:
+   this is code for connecting to mongodb and starting the server:
+     mongoose.set("strictQuery", true);
+mongoose
+  .connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`Connected succesfully and server Running on Port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+
+      in my case .env is not working so declaear variable here 
+
+
+after that create three folders inside backend folder:
+  routes:
+  controllers:
+  models:
+
+  this is similar to nvc model for react website
