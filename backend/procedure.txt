@@ -44,8 +44,43 @@ mongoose
 
 
 after that create three folders inside backend folder:
-  routes:
-  controllers:
-  models:
+  routes:bascially on which url we have to direct following page
+         routes are responsible for mapping incoming HTTP requests to specific controller actions, and determining how to handle requests to those endpoints. They are defined using routing libraries or frameworks, and allow developers to structure the application in a way that separates the logic for handling incoming requests from the logic for handling the data and business logic.
 
-  this is similar to nvc model for react website
+  controllers: controllers are responsible for handling the flow of data between the application's models and views, and for determining how to respond to incoming requests by interacting with the models and determining the appropriate response to send back to the client.
+  
+  models:bascially tells about how the data is stored inside our mongodb means schema 
+         in schema only we can provide validation which are known as server side validation
+         models define the structure and behavior of the data in the application, and include methods for interacting with the database to retrieve, create, update, and delete data, and handling validation and other business logic.
+
+  this is similar to mvc model for react website
+
+download https://insomnia.rest/download:for better intergration with requests and api it makes it very easy to interact with apis 
+you can work with out this also it is your choice
+
+after that create 
+ create middlewares inside server.js
+   these all three middleware are used to parse the data from json format to JavaScript object form
+   app.use(express.json()): used to parse incoming JSON data in the request body and make it available as a JavaScript object.
+   app.use(express.urlencoded({extended:false})):The middleware function will parse the form data and make it available on the request object as req.body.
+   app.use(bodyParser.json())
+
+
+ Routes inside server.js:
+    inside routes we can call these schemas
+
+
+ for each we have to create three files:like for user
+    userRoute.js:for handling routes 
+    userModel.js:for defining model that how data look like in db 
+    userController.js:for handling what to show when particular route is called or typed 
+
+    //path for going to register user page:http://localhost:5000/api/users/register
+
+
+after that we have middleware for errorhandler
+  bascially this deals with the error and message bascially what to show when error occures   
+  erroMiddleware:  
+
+
+  
