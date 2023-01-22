@@ -89,4 +89,15 @@ after that install:npm i express-async-handler
 after that install:npm i bcryptjs
     In summary, bcrypt.js is used because it provides a secure way to store passwords in a MongoDB database or other types of databases by using a computationally expensive algorithm that slows down brute force attacks on hashed passwords.
 
-  
+after that install:npm i jsonwebtoken
+    JSON Web Tokens (JWT) are used for a variety of purposes, but they are most commonly used for authentication and authorization in web applications. They provide a secure way to identify users and transmit information about a user's permissions and roles. JWT's are lightweight, self-contained, don't require the server to store session state, easy to use and have wide range of compatibility.
+     bascially these are used to create session
+
+
+after that install:npm i cookie-parser
+     The cookie-parser package is a middleware for Node.js that parses cookies attached to the client request object, making them available in the request object's cookies property. This package allows to access the cookies data and use it to authenticate users, store user preferences, or perform other actions.
+
+after that install :npm i nodemailer
+     The package provides an easy-to-use API for sending emails, which includes methods such as createTransport(), verify(), and sendMail(). Once the package is installed and configured, it can be imported into a Node.js file and used to send emails.
+
+
